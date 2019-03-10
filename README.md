@@ -36,6 +36,12 @@ pages and push in just the dynamic bits into the surrounding HTML.
 
     // the standard path for templates is src/main/resources/templates/
 
+    main/resources/templates/            holds the template files
+
+### Serving Static Files (html, css, assets)
+Set `staticFileLocation("/public");` in the main() method before the app has
+started. Static files will then be served from `main/resources/public/`. This
+Url is then the base url for accessing static resources.
 
 ## Sending Responses
 
@@ -49,3 +55,10 @@ to the domain.
 
     Response.cookie(String name, String value)  - set new cookie
     Request.cookie(String name)                 - retrieve cookie
+
+
+## Data Model
+DAO - Data Access Object - is a design pattern that is used to decouple the in-
+memory data model from the data persistence method. Data can then be stored in
+files, or different databases without changing the code.
+

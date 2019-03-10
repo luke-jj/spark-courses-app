@@ -6,10 +6,20 @@ import java.util.HashMap;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
+import courses.model.CourseIdea;
+import courses.model.CourseIdeaDAO;
+import courses.model.SimpleCourseIdeaDAO;
+
 import static spark.Spark.*;
+
 
 public class App {
     public static void main(String[] args) {
+
+        staticFileLocation("/public");
+
+        CourseIdeaDAO dao = new SimpleCourseIdeaDAO();
+
         // get is a static method on the 'Spark' class that handles GET requests
         get("/hello", (req, res) -> "Hello World");
 

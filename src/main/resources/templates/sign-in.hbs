@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Signed In</title>
-</head>
-<body>
+<!-- define the content for the template variable "title" -->
+{{#partial "title" }}Signed in!!!{{/partial}}
+
+<!-- define the content for the template variable "content" -->
+{{#partial "content"}}
   <h1>Welcome to the Courses Page</h1>
   <p>Welcome {{ username }}!</p>
-</body>
-</html>
+{{/partial}}
+
+<!-- use the base.hbs template -->
+{{> base.hbs}}
